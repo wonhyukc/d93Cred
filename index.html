@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbyoPzwKQ40n12tPMwCY8zqCjjzlaATLx9K5hsdk-yuYCCS7lu6lgt69_SjhmftnI0PMOA/exec" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 이동 중...</title>
+    <!-- Tailwind CSS를 사용해 스타일을 적용합니다. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 커스텀 스타일 */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-  <p>잠시만 기다려주세요... 페이지를 이동 중입니다.</p>
-  <p>만약 이동되지 않으면 <a href="https://script.google.com/macros/s/AKfycbyoPzwKQ40n12tPMwCY8zqCjjzlaATLx9K5hsdk-yuYCCS7lu6lgt69_SjhmftnI0PMOA/exec">여기를 클릭하세요.</a></p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg text-center max-w-sm w-full">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">페이지 이동 중...</h1>
+        <p class="text-gray-600 mb-6">잠시만 기다려주세요.</p>
+        <a id="redirectLink" href="#" class="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200">
+            만약 이동되지 않으면 여기를 클릭하세요.
+        </a>
+    </div>
+
+    <script>
+        // 페이지가 로드되면 실행되는 JavaScript 코드입니다.
+        window.onload = function() {
+            // 이동할 URL을 변수로 정의합니다.
+            const url = "https://script.google.com/macros/s/AKfycbyoPzwKQ40n12tPMwCY8zqCjjzlaATLx9K5hsdk-yuYCCS7lu6lgt69_SjhmftnI0PMOA/exec";
+            
+            // 3초 후에 페이지를 자동으로 이동시킵니다.
+            setTimeout(() => {
+                window.location.href = url;
+            }, 3000);
+
+            // "여기를 클릭하세요" 링크의 href 속성을 설정합니다.
+            const redirectLink = document.getElementById("redirectLink");
+            if (redirectLink) {
+                redirectLink.href = url;
+            }
+        };
+    </script>
 </body>
 </html>
