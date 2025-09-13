@@ -1,2 +1,2 @@
 # d93Cred
-for collecting attendees
+Credential Manager automation for District 93
